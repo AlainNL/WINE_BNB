@@ -8,11 +8,12 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   </head>
 
   <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
   <div class="nav-custom">
 
@@ -63,9 +64,12 @@
           </div>
         </div>
     </div>
-  </div>
+    <div>
 
-  <%= yield %>
+      <%= yield %>
+
+    </div>
+  </div>
 
   <footer class="container-fluid bg-grey py-5">
     <div class="container">
