@@ -5,7 +5,7 @@ class TeacherPolicy < ApplicationPolicy
       scope.all
     end
   end
-
+  
   def show?
     true
   end

@@ -11,7 +11,6 @@ class TeachersController < ApplicationController
 
   def edit
     @teacher = Teacher.find(params[:id])
-    @teacher = Teacher.new
     authorize @teacher
   end
 
@@ -20,6 +19,11 @@ class TeachersController < ApplicationController
     @teacher.user = current_user
     @teacher.save
     authorize @teacher
+    if @teacher.save
+      redirect_to teacher_path(@teacher)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
