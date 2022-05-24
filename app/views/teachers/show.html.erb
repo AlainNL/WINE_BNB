@@ -1,13 +1,15 @@
 <div class="top-card">
-  <img src="https://1.bp.blogspot.com/-aEW05JvCxz0/YTTfWHEtbjI/AAAAAAAACdc/ePAQ9O9moIsa3aEDexcBPguNRCT69mJLgCNcBGAsYHQ/s16000/user.jpg" alt="user picture">
+  <img src="<%@teacher.picture%>" alt="user picture">
   <div class="menu-icon">
   <div class="menu item1"><i class="fas fa-heart"></i></div>
   <div class="menu item2"><i class="fas fa-bars"></i></div>
 </div>
 
 <div class="middle-card">
-  <h1>/// nom via user </h1>
+  <h1><%@teacher.user.first_name%> <%@teacher.user.last_name%></h1>
+  <h2><%@teacher.user.city%></h2>
   <p><%@teacher.feature%></p>
+  <p><%@teacher.price%></p>
 </div>
 
 <div class="foot-car">
