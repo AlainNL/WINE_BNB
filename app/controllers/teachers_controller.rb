@@ -1,5 +1,5 @@
 class TeachersController < ApplicationController
-  # before_action :set_user, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @teachers = policy_scope(Teacher)
   end
@@ -17,6 +17,7 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     @teacher.user = current_user
+    @teacher.save
     authorize @teacher
     if @teacher.save
       redirect_to teacher_path(@teacher)
@@ -33,6 +34,6 @@ class TeachersController < ApplicationController
   private
 
   def teacher_params
-    params.require(:teacher).permit(:picture, :feature)
+    params.require(:teacher).permit(:price, :picture, :feature, :user_id)
   end
 end
