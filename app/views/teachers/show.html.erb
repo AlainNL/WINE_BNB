@@ -10,6 +10,7 @@
   <h2><%@teacher.user.city%></h2>
   <p><%@teacher.feature%></p>
   <p><%@teacher.price%></p>
+  <%= cl_image_tag @teacher.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
 
 <div class="foot-car">
