@@ -1,6 +1,7 @@
 class TeachersController < ApplicationController
+  # before_action :set_user, only: [:index]
   def index
-    @teachers = Teacher.all
+    @teachers = policy_scope(Teacher)
   end
 
   def new
@@ -10,7 +11,6 @@ class TeachersController < ApplicationController
 
   def edit
     @teacher = Teacher.find(params[:id])
-    @teacher = Teacher.new
     authorize @teacher
   end
 
@@ -18,14 +18,21 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new(teacher_params)
     @teacher.user = current_user
     authorize @teacher
+    if @teacher.save
+      redirect_to teacher_path(@teacher)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show
-    authorize @teachers
     @teacher = Teacher.find(params[:id])
+    authorize @teacher
   end
 
+  private
+
   def teacher_params
-    params.require(:teacher).permit(:first_name, :last_name, :city, :picture, :feature)
+    params.require(:teacher).permit(:picture, :feature)
   end
 end
