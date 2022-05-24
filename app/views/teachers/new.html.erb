@@ -1,19 +1,7 @@
-<h1>New Teachers</h1>
-
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h1>Welcome to WineBnB</h3>
-        <h2>Create your teacher's profile in 5 minutes"
-        <%= simple_form_for @teacher do |f| %>
-          <%= f.input :picture %>
-          <%= f.input :feature, placeholder: 'Wines of Bordeaux' %>
-          <%= f.input :price %>
-          <%= f.submit class: 'btn btn-flat' %>
-        <% end %>
-        <%= link_to "Back to teachers", teachers_path %>
-      </div>
-    </div>
-  </div>
-</div>
+<%= simple_form_for @teacher do |f| %>
+  <%= f.input :picture %>
+  <%= f.input :feature, placeholder: 'Wines of Bordeaux' %>
+  <%= f.input :price %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>
+<%= link_to "Back to teachers", teachers_path %>
