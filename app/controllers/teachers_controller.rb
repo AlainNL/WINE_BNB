@@ -1,6 +1,7 @@
 class TeachersController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @teachers = Teacher.all
+    @teachers = policy_scope(Teacher)
   end
 
   def new
@@ -24,6 +25,8 @@ class TeachersController < ApplicationController
     authorize @teachers
     @teacher = Teacher.find(params[:id])
   end
+
+  private
 
   def teacher_params
     params.require(:teacher).permit(:first_name, :last_name, :city, :picture, :feature)
