@@ -18,17 +18,18 @@ class TeachersController < ApplicationController
   def create
     @teacher = Teacher.new(teacher_params)
     @teacher.user = current_user
+    @teacher.save
     authorize @teacher
   end
 
   def show
-    authorize @teachers
     @teacher = Teacher.find(params[:id])
+    authorize @teacher
   end
 
   private
 
   def teacher_params
-    params.require(:teacher).permit(:first_name, :last_name, :city, :picture, :feature)
+    params.require(:teacher).permit(:price, :picture, :feature, :user_id)
   end
 end
