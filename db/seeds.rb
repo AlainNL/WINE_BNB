@@ -8,22 +8,32 @@
 require 'open-uri'
 require 'json'
 
-User.create(email: 'pierre@gmail.com', password: '1234')
+puts "Start seed"
 
-User.create(email: 'sarah@gmail.com', password: '1234')
+Teacher.destroy_all
+User.destroy_all
 
-User.create(email: 'nicolas@gmail.com', password: '1234')
 
-User.create(email: 'louis@gmail.com', password: '1234')
+pierre = User.create(email: 'pierre@gmail.com', password: '12345678')
 
-User.create(email: 'juliette@gmail.com', password: '1234')
+sarah = User.create(email: 'sarah@gmail.com', password: '12345678')
 
-Teacher.create(feature: '', price: '30', picture: '')
+nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678')
 
-Teacher.create(feature: '', price: '40', picture: '')
+louis = User.create(email: 'louis@gmail.com', password: '12345678')
 
-Teacher.create(feature: '', price: '60', picture: '')
+juliette = User.create(email: 'juliette@gmail.com', password: '12345678')
 
-Teacher.create(feature: '', price: '70', picture: '')
+puts "user seed"
 
-Teacher.create(feature: '', price: '100', picture: '')
+Teacher.create(feature: '', price: '30', picture: '', user: pierre)
+
+Teacher.create(feature: '', price: '40', picture: '', user: sarah)
+
+Teacher.create(feature: '', price: '60', picture: '', user: nicolas)
+
+Teacher.create(feature: '', price: '70', picture: '', user: louis)
+
+Teacher.create(feature: '', price: '100', picture: '', user: juliette)
+
+puts "teacher seed"
