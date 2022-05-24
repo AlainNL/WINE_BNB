@@ -12,45 +12,65 @@
 
   <body>
 
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-      <div class="container-fluid">
-        <%= link_to "#", class: "navbar-brand" do %>
-          <%= image_tag "logo.png" %>
-        <% end %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <div class="nav-custom">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto">
-            <%# if user_signed_in? %>
-              <li class="nav-item active">
-                <%= link_to "Home", "#", class: "nav-link" %>
-              </li>
-              <li class="nav-item">
-                <%= link_to "Messages", "#", class: "nav-link" %>
-              </li>
-              <li class="nav-item dropdown">
-                <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <%= link_to "Action", "#", class: "dropdown-item" %>
-                  <%= link_to "Another action", "#", class: "dropdown-item" %>
-                  <%#= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-                </div>
-              </li>
-            <%# else %>
-              <!--li class="nav-item"-->
-                <%#= link_to "Login", new_user_session_path, class: "nav-link" %>
-              <!--/li-->
-            <%# end %>
-          </ul>
+    <input type="checkbox" id="burger-toggle">
+
+    <label for="burger-toggle" class="burger-menu">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+
+    <div class="menu">
+      <div class="menu-inner">
+        <ul class="menu-nav">
+          <% if user_signed_in? %>
+            <li class="menu-nav-item"><%= link_to "Home", root_path, class: "menu-nav-link" %> <span></span>
+            </li>
+            <li class="menu-nav-item"><%= link_to "Dashboard", "#", class: "menu-nav-link" %>
+            </li>
+            <li class="menu-nav-item"><%= link_to "Create Event", "#", class: "menu-nav-link" %>
+            </li>
+            <li class="menu-nav-item"><%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "menu-nav-link" %>
+            </li>
+          <% else %>
+            <li class="menu-nav-item"><%= link_to "Login", new_user_session_path, class: "menu-nav-link" %>
+            </li>
+          <% end %>
+        </ul>
+
+          <div class="gallery">
+            <div class="title">
+              <p>Wine BnB gallery</p>
+            </div>
+            <div class="images">
+              <a class="image-link" href="#">
+                <div class="image" data-label="Our wines"><img src="https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg" alt=""></div>
+              </a>
+              <a class="image-link" href="#">
+                <div class="image" data-label="Our events"><img src="https://cdn.pixabay.com/photo/2016/03/27/18/53/drinks-1283608__340.jpg" alt=""></div>
+              </a>
+              <a class="image-link" href="#">
+                <div class="image" data-label="Our winemakers"><img src="https://cdn.pixabay.com/photo/2016/09/10/13/34/grapes-1659118__340.jpg" alt=""></div>
+              </a>
+              <a class="image-link" href="#">
+                <div class="image" data-label="For more sharing"><img src="https://cdn.pixabay.com/photo/2012/07/26/20/55/barrels-52934__340.jpg" alt=""></div>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
+    <div>
 
+      <%= yield %>
 
-    <%= yield %>
+    </div>
+  </div>
+
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
   <div class="row">
@@ -58,7 +78,7 @@
         <div class="row">
             <div class="col-md-6 ">
               <div class="logo-part">
-                  <h1>WINE BnB</h1>
+                  <h5>WINE BnB</h5>
                   <p>16 Villa Gaudelet 75011 Paris</p>
               </div>
             </div>
@@ -86,7 +106,6 @@
 </div>
 </footer>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+
   </body>
 </html>
