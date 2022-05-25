@@ -2,10 +2,12 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  margin: 10px;
 }
 
 .card-profile > img {
-  height: 10px;
+  height: 100px;
   width: 100%;
   object-fit: cover;
 }
@@ -14,10 +16,11 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: black
 }
 
 .card-profile p {
-  font-size: 12px;
+  font-size: 16px;
   opacity: .7;
   margin: 0;
 }
@@ -26,14 +29,17 @@
 .card-profile .card-profile-infos {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-end;
   position: relative;
 }
 
 .card-profile-infos .card-profile-user {
   position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+  left: 50%;
+  top: -30px;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
 }
