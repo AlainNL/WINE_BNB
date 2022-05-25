@@ -1,16 +1,16 @@
-<div class="top-card">
-  <img src="<%@teacher.picture%>" alt="user picture">
+<div class="socials">
+  <%= cl_image_tag @teacher.photo.key, height: 300, width: 400, crop: :fill %>
   <div class="menu-icon">
   <div class="menu item1"><i class="fas fa-heart"></i></div>
   <div class="menu item2"><i class="fas fa-bars"></i></div>
 </div>
-  
-<div class="middle-card">
+
+<div class="details">
   <h1><%@teacher.user.first_name%> <%@teacher.user.last_name%></h1>
   <h2><%@teacher.user.city%></h2>
   <p><%@teacher.feature%></p>
   <p><%@teacher.price%></p>
-  <%= cl_image_tag @teacher.photo.key, height: 300, width: 400, crop: :fill %>
+
 </div>
 
 <div class="foot-car">
@@ -23,4 +23,3 @@
     <%= link_to "book now!", new_teacher_booking_path(@teacher.id) %>
   </div>
 </div>
-
