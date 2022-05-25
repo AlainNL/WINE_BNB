@@ -4,7 +4,7 @@
   <div class="menu item1"><i class="fas fa-heart"></i></div>
   <div class="menu item2"><i class="fas fa-bars"></i></div>
 </div>
-
+  
 <div class="middle-card">
   <h1><%@teacher.user.first_name%> <%@teacher.user.last_name%></h1>
   <h2><%@teacher.user.city%></h2>
@@ -20,6 +20,6 @@
 
   <div class="links">
     <button>Contact me</button>
-    <button>Book now!</button>
+    <%= link_to "book now!", new_teacher_booking_path(@teacher.id) %>
   </div>
 </div>
