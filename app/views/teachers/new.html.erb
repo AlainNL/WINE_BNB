@@ -4,7 +4,7 @@
       <h1>Welcome to WineBnB</h1>
       <h3>Create your oenologist profile in 5 minutes</h3>
       <%= simple_form_for @teacher do |f| %>
-            <%= f.input :picture, label: 'Please add your picture', as: :file %>
+            <%= f.input :photo, label: 'Please add your picture', as: :file %>
             <%= f.input :feature, label: 'Main skills', placeholder: 'Wines of Bordeaux' %>
             <%= f.input :price, label: "Rate per half day" %>
             <%= f.submit "Register", class: 'btn btn-outline-dark'%>
