@@ -91,6 +91,7 @@ p {
 .burger-menu {
   --burger-menu-radius: 4em;
 
+  z-index: 1000;
   position: fixed;
   top: 5vh;
   right: 5vw;
@@ -124,6 +125,7 @@ p {
     }
 
     &::after {
+      z-index: 1000;
       position: absolute;
       content: "";
       top: 0;
@@ -150,6 +152,7 @@ p {
 }
 
 .menu {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
