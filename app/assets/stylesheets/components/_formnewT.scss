@@ -1,0 +1,36 @@
+.formnewT {
+  background-color: #FFD1BA;
+  width: 500px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.formnewT h1 {
+  justify-content: center;
+  align-items: center;
+  color: rgb(40, 75, 99);
+  font-size: 48px;
+  padding: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.formnewT h3 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(40, 75, 99);
+  font-size: 24px;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.formnewT label {
+  color: rgb(153, 13, 53);
+  font-weight: bold;
+  padding: 5px;
+}
