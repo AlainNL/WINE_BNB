@@ -1,15 +1,15 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+// .navbar-lewagon {
+//   justify-content: space-between;
+//   background: white;
+// }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+// .navbar-lewagon .navbar-collapse {
+//   flex-grow: 0;
+// }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+// .navbar-lewagon .navbar-brand img {
+//   width: 40px;
+// }
 
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 
@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 0px;
   margin: 0;
   font-family: Lora, sans-serif;
 }
@@ -91,10 +91,11 @@ p {
 .burger-menu {
   --burger-menu-radius: 4em;
 
+  z-index: 1000;
   position: fixed;
   top: 5vh;
   right: 5vw;
-  z-index: 100;
+  z-index: 1000;
   display: block;
   width: var(--burger-menu-radius);
   height: var(--burger-menu-radius);
@@ -124,6 +125,7 @@ p {
     }
 
     &::after {
+      z-index: 1000;
       position: absolute;
       content: "";
       top: 0;
@@ -150,12 +152,14 @@ p {
 }
 
 .menu {
+  z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   display: flex;
+  z-index: 999;
   justify-content: center;
   align-items: center;
   background: #1a1e23;

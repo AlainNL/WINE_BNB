@@ -11,3 +11,7 @@
 @import "components/index";
 @import "pages/index";
 @import "components/card_category";
+
+.main-container {
+  min-height: calc(100vh - 277.6px);
+}
