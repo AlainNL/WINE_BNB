@@ -14,11 +14,11 @@ Teacher.destroy_all
 User.destroy_all
 
 
-pierre = User.create(email: 'pierre@gmail.com', password: '12345678')
+pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean")
 
-sarah = User.create(email: 'sarah@gmail.com', password: '12345678')
+sarah = User.create(email: 'sarah@gmail.com', password: '12345678', first_name: "sarah", last_name: "du desert")
 
-nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678')
+nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit")
 
 louis = User.create(email: 'louis@gmail.com', password: '12345678')
 
@@ -26,14 +26,18 @@ juliette = User.create(email: 'juliette@gmail.com', password: '12345678')
 
 puts "user seed"
 
-Teacher.create(feature: '', price: '30', picture: '', user: pierre)
+piere = Teacher.create(feature: '', price: '30', picture: '', user: pierre)
 
-Teacher.create(feature: '', price: '40', picture: '', user: sarah)
+sara = Teacher.create(feature: '', price: '40', picture: '', user: sarah)
 
-Teacher.create(feature: '', price: '60', picture: '', user: nicolas)
+nico = Teacher.create(feature: '', price: '60', picture: '', user: nicolas)
 
 Teacher.create(feature: '', price: '70', picture: '', user: louis)
 
 Teacher.create(feature: '', price: '100', picture: '', user: juliette)
+
+Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
+Booking.create(date: '25 mai', user_id: sarah.id, teacher_id: sara.id )
+Booking.create(date: '25 mai', user_id: nicolas.id, teacher_id: nico.id )
 
 puts "teacher seed"
