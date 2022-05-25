@@ -1,6 +1,11 @@
 class BookingsController < ApplicationController
   before_action :set_teacher, only: [:new, :create]
 
+  def show
+    @booking = Booking.find(params[:id])
+    authorize @booking
+  end
+
   def new
     @booking = Booking.new
     authorize @booking
