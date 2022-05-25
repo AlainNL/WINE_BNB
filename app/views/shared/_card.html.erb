@@ -4,7 +4,7 @@
   <ul class="cards">
   <% @bookings.last(3).each do |b| %>
     <li>
-      <a href="" class="card">
+      <%= link_to booking_path(b), class: 'card' do %>
         <img src="https://cdn.pixabay.com/photo/2015/11/26/22/28/woman-1064664__340.jpg" class="card__image" alt="" />
         <div class="card__overlay">
           <div class="card__header">
@@ -20,7 +20,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
           </p>
         </div>
-      </a>
+      <% end %>
     </li>
 <% end %>
 </div>
