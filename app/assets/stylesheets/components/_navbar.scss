@@ -95,7 +95,7 @@ p {
   position: fixed;
   top: 5vh;
   right: 5vw;
-  z-index: 100;
+  z-index: 1000;
   display: block;
   width: var(--burger-menu-radius);
   height: var(--burger-menu-radius);
@@ -159,6 +159,7 @@ p {
   width: 100%;
   height: 100%;
   display: flex;
+  z-index: 999;
   justify-content: center;
   align-items: center;
   background: #1a1e23;
