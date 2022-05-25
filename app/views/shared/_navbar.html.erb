@@ -14,7 +14,7 @@
         <% if user_signed_in? %>
           <li class="menu-nav-item"><%= link_to "Home", root_path, class: "menu-nav-link" %> <span></span>
           </li>
-          <li class="menu-nav-item"><%= link_to "Dashboard", "#", class: "menu-nav-link" %>
+          <li class="menu-nav-item"><%= link_to "Dashboard", dashboard_path, class: "menu-nav-link" %>
           </li>
           <li class="menu-nav-item"><%= link_to "Become Enologist", new_teacher_path, class: "menu-nav-link" %>
           </li>
