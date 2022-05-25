@@ -1,18 +1,50 @@
-* {
-  padding: 0;
-  margin: 0;
-}
+// * {
+//   padding: 0;
+//   margin: 0;
+// }
 
-html {
-  font-family: 'Roboto', sans-serif;
-  font-size: 12px;
-}
+// html {
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 12px;
+// }
 
 
-.wrapper {
+.booking-show-wrapper {
   height: 100%;
   width: 100%;
   height: 100vh;
+  img {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 100%;
+    box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
+  }
+
+  h3 {
+    font-family: Sonar Sans from FamiraFonts;
+    margin: 0 0 0.5rem 0;
+    color: #999;
+    font-size: 1.25rem;
+  }
+
+  h1 {
+    font-family: Sonar Sans from FamiraFonts;
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    letter-spacing: 0.5px;
+    color: #333;
+  }
+
+  p {
+    font-family: Sonar Sans from FamiraFonts;
+    margin: -2px 0px 1.5rem 1px;;
+    font-size: 1.5rem;
+    color: #333;
+  }
 }
 
 .blog_post {
@@ -40,38 +72,7 @@ html {
   transform: translateY(-50%);
 }
 
-img {
-  height: 100px;
-  width: 100px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 100%;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-}
 
-h3 {
-  font-family: Sonar Sans from FamiraFonts;
-  margin: 0 0 0.5rem 0;
-  color: #999;
-  font-size: 1.25rem;
-}
-
-h1 {
-  font-family: Sonar Sans from FamiraFonts;
-  margin: 0 0 1rem 0;
-  font-size: 2.5rem;
-  letter-spacing: 0.5px;
-  color: #333;
-}
-
-p {
-  font-family: Sonar Sans from FamiraFonts;
-  margin: -2px 0px 1.5rem 1px;;
-  font-size: 1.5rem;
-  color: #333;
-}
 
 .btn_primary {
   font-family: Sonar Sans from FamiraFonts;
