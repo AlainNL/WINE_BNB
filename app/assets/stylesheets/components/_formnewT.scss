@@ -1,9 +1,17 @@
+.container2 {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
 .formnewT {
-  background-color: #FFD1BA;
+  background-color: white;
   width: 500px;
-  margin-left: 100px;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  border-radius: 4px;
+  padding: 8px;
+  opacity: 0.8;
 }
 
 .formnewT h1 {
@@ -22,7 +30,7 @@
   align-items: center;
   text-align: center;
   color: rgb(40, 75, 99);
-  font-size: 24px;
+  font-size: 20px;
   padding: 10px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -33,4 +41,17 @@
   color: rgb(153, 13, 53);
   font-weight: bold;
   padding: 5px;
+}
+
+.formnewT .btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(40, 75, 99);
+  width: 100%;
+}
+
+.formnewT .btn-flat:hover {
+  background: rgb(40, 75, 99);
+  color: white;
 }
