@@ -1,5 +1,5 @@
 <div class="row">
- <div class="container">
+ <div class="container2" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg')">
   <div class="formnewT">
       <h1>Welcome to WineBnB</h1>
       <h3>Create your oenologist profile in 5 minutes</h3>
@@ -7,9 +7,9 @@
             <%= f.input :photo, label: 'Please add your picture', as: :file %>
             <%= f.input :feature, label: 'Main skills', placeholder: 'Wines of Bordeaux' %>
             <%= f.input :price, label: "Rate per half day" %>
-            <%= f.submit "Register", class: 'btn btn-outline-dark'%>
+            <%= f.submit "Register", class: 'btn btn-flat'%>
           <% end %>
-          <%= link_to "Back to teachers", teachers_path %>
+          <%= link_to "Back to oenologists", teachers_path %>
     </div>
   </div>
 </div>
