@@ -13,12 +13,16 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.teacher = @teacher
     @booking.date = @date
     @booking.user = current_user
-    @booking.teacher = @teacher
     flash[:notice] = @booking.errors.full_messages.to_sentence unless @booking.save
     authorize @booking
-    redirect_to teacher_path
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private

@@ -8,12 +8,13 @@
       <input type="radio" name="slides" id="slide-5">
       <input type="radio" name="slides" id="slide-6">
 
+
       <ul class="carousel__slides">
         <% @teachers.each do |t|   %>
           <li class="carousel__slide">
             <figure>
               <div>
-                <%= image_tag t.picture %>
+                <%= cl_image_tag t.photo.key %>
               </div>
               <figcaption>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -30,7 +31,7 @@
           <% count = 1 %>
         <% @teachers.each do |t| %>
           <li>
-            <label for="slide-<%= count %>"><%= image_tag t.picture %></label>
+            <label for="slide-<%= count %>"><%= cl_image_tag t.photo.key %></label>
           </li>
           <% count += 1 %>
         <% end %>

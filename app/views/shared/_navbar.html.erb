@@ -16,7 +16,7 @@
           </li>
           <li class="menu-nav-item"><%= link_to "Dashboard", dashboard_path, class: "menu-nav-link" %>
           </li>
-          <li class="menu-nav-item"><%= link_to "Become Enologist", new_teacher_path, class: "menu-nav-link" %>
+          <li class="menu-nav-item"><%= link_to "Become Oenologist", new_teacher_path, class: "menu-nav-link" %>
           </li>
           <li class="menu-nav-item"><%= link_to "Log out", destroy_user_session_path, data: { turbo_method: :delete }, class: "menu-nav-link" %>
           </li>
@@ -31,18 +31,26 @@
           <p>Wine BnB gallery</p>
         </div>
         <div class="images">
-          <a class="image-link" href="#">
-            <div class="image" data-label="Our oenologists"><img src="https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg" alt=""></div>
-          </a>
-          <a class="image-link" href="#">
-            <div class="image" data-label="Our events"><img src="https://cdn.pixabay.com/photo/2016/03/27/18/53/drinks-1283608__340.jpg" alt=""></div>
-          </a>
-          <a class="image-link" href="#">
-            <div class="image" data-label="Our winemakers"><img src="https://cdn.pixabay.com/photo/2016/09/10/13/34/grapes-1659118__340.jpg" alt=""></div>
-          </a>
-          <a class="image-link" href="#">
-            <div class="image" data-label="For more sharing"><img src="https://cdn.pixabay.com/photo/2012/07/26/20/55/barrels-52934__340.jpg" alt=""></div>
-          </a>
+          <%= link_to teachers_path, class: 'image-link' do %>
+            <div class="image" data-label="Our oenologists">
+              <img src="https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg" alt="">
+            </div>
+          <% end %>
+          <%= link_to new_teacher_path, class: 'image-link' do %>
+            <div class="image" data-label="Our events">
+              <img src="https://cdn.pixabay.com/photo/2016/03/27/18/53/drinks-1283608__340.jpg" alt="">
+            </div>
+          <% end %>
+          <%= link_to new_teacher_path, class: 'image-link' do %>
+            <div class="image" data-label="Become Oenologist">
+              <img src="https://cdn.pixabay.com/photo/2016/09/10/13/34/grapes-1659118__340.jpg" alt="">
+            </div>
+          <% end %>
+          <%= link_to new_teacher_path, class: 'image-link' do %>
+            <div class="image" data-label="For more sharing">
+              <img src="https://cdn.pixabay.com/photo/2012/07/26/20/55/barrels-52934__340.jpg" alt="">
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
