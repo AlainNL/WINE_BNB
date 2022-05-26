@@ -1,0 +1,78 @@
+.container3 {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+}
+
+.formnewB {
+  background-color: white;
+  width: 500px;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
+  border-radius: 4px;
+  padding: 8px;
+  opacity: 0.9;
+}
+
+.formnewB h1 {
+  justify-content: center;
+  align-items: center;
+  color: rgb(40, 75, 99);
+  font-size: 48px;
+  padding: 15px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.formnewB h3 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(40, 75, 99);
+  font-size: 20px;
+  padding: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.formnewB label {
+  color: rgb(153, 13, 53);
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.formnewB .btn-flat {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: rgb(40, 75, 99);
+  width: 100%;
+}
+
+.formnewB .btn-flat:hover {
+  background: rgb(40, 75, 99);
+  color: white;
+}
+
+.formnewB .form-label {
+  margin-bottom: 0;
+}
+.booking-infos {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.booking-infos .avatar-large {
+  width: 124px;
+  height: 109px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teacher-infos{
+  margin-left: 10px;
+}
