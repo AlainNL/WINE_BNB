@@ -2,6 +2,7 @@ class TeachersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @teachers = policy_scope(Teacher)
+    @user = current_user
   end
 
   def new
