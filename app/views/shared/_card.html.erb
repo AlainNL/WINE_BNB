@@ -1,11 +1,11 @@
 <div class="container">
-  <h2>Last event registered</h2>
+  <h2>Last booking made on WineBnB</h2>
 
   <ul class="cards">
   <% @bookings.last(3).each do |b| %>
     <li>
       <%= link_to booking_path(b), class: 'card' do %>
-        <img src="https://cdn.pixabay.com/photo/2015/11/26/22/28/woman-1064664__340.jpg" class="card__image" alt="" />
+        <%= cl_image_tag b.teacher.photo.key, class: "card__image" %>
         <div class="card__overlay">
           <div class="card__header">
             <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
@@ -17,7 +17,7 @@
             </div>
           </div>
           <p class="card__description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+            <%= b.teacher.feature %>
           </p>
         </div>
       <% end %>
