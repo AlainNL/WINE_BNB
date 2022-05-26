@@ -1,8 +1,10 @@
 require 'open-uri'
 require 'json'
 
-
-puts "Start seed"
+puts "------------------------------"
+puts "----------Start seed----------"
+puts "------------------------------"
+sleep(1)
 puts "User seed start..."
 
 Booking.destroy_all
@@ -53,4 +55,10 @@ Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
 Booking.create(date: '25 mai', user_id: sarah.id, teacher_id: sara.id )
 Booking.create(date: '25 mai', user_id: nicolas.id, teacher_id: nico.id )
 
-puts "Booking seed finish !"
+puts "Booking seed finish..."
+
+sleep(1)
+
+puts "------------------------------"
+puts "----------All Good !----------"
+puts "------------------------------"
