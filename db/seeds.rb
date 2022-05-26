@@ -12,17 +12,29 @@ puts "Start seed"
 
 Teacher.destroy_all
 User.destroy_all
+Booking.destroy_all
 
+file = URI.open("https://pixabay.com/photos/search/man%20woman/")
 
-pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean")
+pierre = User.new(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean")
+pierre.photo.attach(io: file, filename: "pierre.png", content_type: "image/png")
+pierre.save
 
-sarah = User.create(email: 'sarah@gmail.com', password: '12345678', first_name: "sarah", last_name: "du desert")
+sarah = User.new(email: 'sarah@gmail.com', password: '12345678', first_name: "sarah", last_name: "du desert")
+sarah.photo.attach(io: file, filename: "sarah.png", content_type: "image/png")
+sarah.save
 
-nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit")
+nicolas = User.new(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit")
+nicolas.photo.attach(io: file, filename: "nicolas.png", content_type: "image/png")
+nicolas.save
 
-louis = User.create(email: 'louis@gmail.com', password: '12345678', first_name: "louis", last_name: "lafonte")
+louis = User.new(email: 'louis@gmail.com', password: '12345678', first_name: "louis", last_name: "lafonte")
+louis.photo.attach(io: file, filename: "louis.png", content_type: "image/png")
+louis.save
 
-juliette = User.create(email: 'juliette@gmail.com', password: '12345678', first_name: "juliette", last_name: "Jetaime")
+juliette = User.new(email: 'juliette@gmail.com', password: '12345678', first_name: "juliette", last_name: "Jetaime")
+juliette.photo.attach(io: file, filename: "juliette.png", content_type: "image/png")
+juliette.save
 
 puts "user seed"
 
