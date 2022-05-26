@@ -20,21 +20,21 @@ sarah = User.create(email: 'sarah@gmail.com', password: '12345678', first_name: 
 
 nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit")
 
-louis = User.create(email: 'louis@gmail.com', password: '12345678')
+louis = User.create(email: 'louis@gmail.com', password: '12345678', first_name: "louis", last_name: "lafonte")
 
-juliette = User.create(email: 'juliette@gmail.com', password: '12345678')
+juliette = User.create(email: 'juliette@gmail.com', password: '12345678', first_name: "juliette", last_name: "Jetaime")
 
 puts "user seed"
 
-piere = Teacher.create(feature: '', price: '30', picture: '', user: pierre)
+piere = Teacher.create(feature: '', price: '30', picture: 'https://media.istockphoto.com/photos/portrait-of-mature-businessman-picture-id1327603929?k=20&m=1327603929&s=612x612&w=0&h=UgF0xUZXJbNVshou9Jpt_bKtQRIa9IyXEkxlAIZxyK8=', user: pierre)
 
-sara = Teacher.create(feature: '', price: '40', picture: '', user: sarah)
+sara = Teacher.create(feature: '', price: '40', picture: 'https://media.istockphoto.com/photos/young-african-woman-smiling-at-sunset-picture-id969233490?k=20&m=969233490&s=612x612&w=0&h=jXLgjbu0CIWEohHgcx_ZHBhrcH3hNKcg7TVJgehndPg=', user: sarah)
 
-nico = Teacher.create(feature: '', price: '60', picture: '', user: nicolas)
+nico = Teacher.create(feature: '', price: '60', picture: 'https://media.istockphoto.com/photos/smiling-man-with-arms-crossed-wearing-eyeglasses-picture-id1284027512?k=20&m=1284027512&s=612x612&w=0&h=gJFKUHjcUwv-WHAl6zLHmbfsJmJTLp5p1KqFBqSsO3w=', user: nicolas)
 
-Teacher.create(feature: '', price: '70', picture: '', user: louis)
+Teacher.create(feature: '', price: '70', picture: 'https://media.istockphoto.com/photos/damn-right-i-approve-picture-id1139070467?k=20&m=1139070467&s=612x612&w=0&h=uYQ3Xxsq_cqiLELXnmfTTME4ghXwsfsGXTjtb9UyOyo=', user: louis)
 
-Teacher.create(feature: '', price: '100', picture: '', user: juliette)
+Teacher.create(feature: '', price: '100', picture: 'https://media.istockphoto.com/photos/portrait-of-young-smiling-woman-face-partially-covered-with-flying-picture-id1297159365?k=20&m=1297159365&s=612x612&w=0&h=RHC5Qy40yAgwmpZVj0vXKUzcUm6qrY2MSSWzj2nLQlg=', user: juliette)
 
 Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
 Booking.create(date: '25 mai', user_id: sarah.id, teacher_id: sara.id )
