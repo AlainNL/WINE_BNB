@@ -62,7 +62,6 @@
 }
 .booking-infos {
     display: flex;
-    justify-content: center;
     flex-grow: 1;
 }
 
@@ -75,4 +74,5 @@
 
 .teacher-infos{
   margin-left: 10px;
+  flex-grow: 1;
 }
