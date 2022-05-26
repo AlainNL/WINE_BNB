@@ -1,1 +1,21 @@
-test
+<div class="row">
+  <div class="container3" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://www.toutlevin.com/img/487623a6aa3886847bc3a5aee927514c-1920.jpg')">
+    <div class="formnewB">
+      <h1>Book now!</h1>
+      <div class="booking-infos">
+        <%= cl_image_tag @teacher.photo.key, class: "avatar-large" %>
+        <div class="teacher-infos">
+          <h3><%= @teacher.user.first_name%> <%@teacher.user.last_name%></h3>
+          <h3><%= @teacher.user.city%></h3>
+          <p><%= @teacher.feature%></p>
+          <p>Half day session rate: <%= @teacher.price.to_i%>$</p>
+        </div>
+      </div>
+        <%= simple_form_for([@teacher, @booking]) do |f| %>
+          <%= f.input :date, as: :date, label: "Date where you want to book #{@teacher.user.first_name}", html5: true %>
+          <%= f.submit "Book", class: 'btn btn-flat' %>
+        <% end %>
+        <%= link_to "Back to oenologists", teachers_path %>
+    </div>
+  </div>
+</div>
