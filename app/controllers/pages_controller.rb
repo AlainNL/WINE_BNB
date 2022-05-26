@@ -3,5 +3,6 @@ class PagesController < ApplicationController
   def home
     @user = User.first
     @bookings = Booking.all
+    @teacher = Teacher.all
   end
 end
