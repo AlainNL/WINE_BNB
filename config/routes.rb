@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :bookings, only: [:destroy, :show]
-  get "/dashboard", to: "dashboards#show", as: :dashboard
 
+  get "/dashboard/myclasses", to: "dashboards#myclasses", as: :dashboard
+  get "/dashboard/myreservations", to: "dashboards#myreservations"
 end
