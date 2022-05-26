@@ -21,6 +21,7 @@ juliette = User.create(email: 'juliette@gmail.com', password: '12345678', first_
 
 puts "user seed finish !"
 
+
 puts "Teacher seed start..."
 
 piere = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots.', price: '30', picture: '', user: pierre)
@@ -49,7 +50,7 @@ puts "Booking seed start..."
 
 Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
 Booking.create(date: '25 mai', user_id: sarah.id, teacher_id: sara.id )
-Booking.create(date: '25 mai', user_id: nicolas.id, teacher_id: nico.id )
-
+Booking.create(date: '25 mai', user_id: nicolas.id, teac<<<<<<< seedher_id: nico.id )
 
 puts "Booking seed finish !"
+
