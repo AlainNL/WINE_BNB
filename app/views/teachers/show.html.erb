@@ -1,17 +1,30 @@
-<div class="card_teacher">
-    <div class="teacher-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=cl_image_path @teacher.photo.key%>)"></div>
-    <h2><%=@teacher.user.first_name%> <%=@teacher.user.last_name%></h2>
-    <p><%=@teacher.user.city%></p>
-    <p><%=@teacher.feature%></p>
-    <div class="card-price"><%=@teacher.price.to_i%> €</div>
+<% require "date"%>
 
-      <div class="social-logo">
-        <a id ="teacher" href="#"><i class="fa fa-dribbble"></i></a>
-        <a id ="teacher" href="#"><i class="fa fa-twitter"></i></a>
-        <a id ="teacher" href="#"><i class="fa fa-linkedin"></i></a>
-        <a id ="teacher" href="#"><i class="fa fa-facebook"></i></a>
+<br>
+<br>
+<br>
+<br>
+<div class="formnewT" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg')">
+  <div class="card-container">
+    <div class="card-my-booking u-clearfix">
+      <div class="card-body">
+        <span class="card-number card-circle subtle">B</span>
+        <span class="card-author subtle"><p><%=@teacher.user.city%></p></span>
+          <h2 class="card-title"><%=@teacher.user.first_name.capitalize%> <%=@teacher.user.last_name.capitalize%></h2>
+        <span class="card-description subtle"><p><%=@teacher.feature%></p></span>
+        <div class="card-price my-2"><%=@teacher.price.to_i%> €</div>
+        <%= link_to "Book Now!", new_teacher_booking_path(@teacher.id), class: "button-main my-4"%>
+
+        <div class="social-logo">
+                <a id ="teacher" href="#"><i class="fa fa-dribbble"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-twitter"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-linkedin"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-facebook"></i></a><br>
+              </div>
       </div>
+        <%=cl_image_tag @teacher.photo.key, class:"card-media" %>
+    </div>
 
-      <%= link_to "Book Now!", new_teacher_booking_path(@teacher.id), class: "button-main"%>
-
+  </div>
 </div>
+  <%= render 'shared/footer' %>
