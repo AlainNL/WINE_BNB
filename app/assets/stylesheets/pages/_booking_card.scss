@@ -44,6 +44,8 @@ html {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 2px;
+  padding: 10px;
+  margin: 20px;
 }
 
 .card {
@@ -133,6 +135,7 @@ html {
 .card-media {
   float: right;
   width: 50%;
+  padding: 10px;
 }
 
 .card-shadow {
