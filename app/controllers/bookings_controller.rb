@@ -13,8 +13,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.teacher = @teacher
-    @booking.date = @date
+    @booking.teacher = Teacher.find(params[:teacher_id])
     @booking.user = current_user
     flash[:notice] = @booking.errors.full_messages.to_sentence unless @booking.save
     authorize @booking
@@ -28,7 +27,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :user_id, :teacher_id)
+    params.require(:booking).permit(:date)
   end
 
   def set_teacher
