@@ -3,6 +3,7 @@
   margin-bottom: 10vh;
   z-index: 998;
   position: absolute;
+  width: 100%;
 }
 :root {
   --surface-color: #fff;
@@ -18,12 +19,12 @@ body {
 }
 
 .cards-home {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
   gap: 2rem;
-  margin: 4rem 5vw;
   padding: 0;
   list-style-type: none;
+  margin-top: 364px;
+  justify-content: center;
 }
 
 .card-home {
@@ -36,9 +37,17 @@ body {
   text-decoration: none;
 }
 
+.card-home li {
+  width: 315px;
+}
+
+.cards-home li {
+  width: 290px;
+}
+
 .card__image {
   width: 100%;
-  height: auto;
+  height: 290px;
 }
 
 .card__overlay {
@@ -97,7 +106,7 @@ body {
 .card__title {
   font-size: 2em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: black;
 }
 
 .card__tagline {
@@ -105,19 +114,19 @@ body {
   margin: 1em 0;
   font-family: "MockFlowFont";
   font-size: .8em;
-  color: #D7BDCA;
+  color: black;
 }
 
-.card__status {
+.card__status {    width: 315px;
   font-size: 1em;
-  color: #92868c;
+  color: black;
 }
 
 .card__description {
-  font-size: 2em;
+  font-size: 16px;
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
+  color: black;
   font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;

@@ -19,8 +19,7 @@
                 <% end %>
               </div>
               <figcaption>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <span class="credit">Teachers: <%= t.first_name.capitalize %> <%= t.last_name.capitalize %> </span>
+                <span class="credit"><br><%= t.first_name.capitalize %> <%= t.last_name.capitalize %> </span>
                 <main>
                   <%= link_to 'About Me', teacher_path(t), class: 'button span', style: 'text-decoration: none; color: black; font-size: 20px'  %>
                 </main>
