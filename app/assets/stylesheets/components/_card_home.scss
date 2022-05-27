@@ -1,4 +1,4 @@
-.container {
+.container-home {
   margin-top: 10vh;
   margin-bottom: 10vh;
 }
@@ -15,7 +15,7 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.cards {
+.cards-home {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
@@ -24,7 +24,7 @@ body {
   list-style-type: none;
 }
 
-.card {
+.card-home {
   background-color: #02020200;
   position: relative;
   display: block;
@@ -51,7 +51,7 @@ body {
   transition: .2s ease-in-out;
 }
 
-.card:hover .card__overlay {
+.card-home:hover .card__overlay {
   transform: translateY(0);
 }
 
@@ -81,7 +81,7 @@ body {
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
-.card:hover .card__header {
+.card-home:hover .card__header {
   transform: translateY(0);
 }
 
