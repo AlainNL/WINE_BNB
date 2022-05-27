@@ -14,7 +14,9 @@
           <li class="carousel__slide">
             <figure>
               <div>
-                <%= cl_image_tag t.photo.key %>
+                <% if t.photo.attached? %>
+                  <%= cl_image_tag t.photo.key %>
+                <% end %>
               </div>
               <figcaption>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -31,7 +33,9 @@
           <% count = 1 %>
         <% @teachers.each do |t| %>
           <li>
-            <label for="slide-<%= count %>"><%= cl_image_tag t.photo.key %></label>
+            <% if t.photo.attached? %>
+              <label for="slide-<%= count %>"><%= cl_image_tag t.photo.key %></label>
+            <%end%>
           </li>
           <% count += 1 %>
         <% end %>

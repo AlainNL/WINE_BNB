@@ -10,7 +10,6 @@ puts "User seed start..."
 Booking.destroy_all
 Teacher.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean", city: "Rennes")
 
