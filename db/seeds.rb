@@ -46,24 +46,24 @@ sleep(1)
 
 puts "Teacher seed start..."
 
-piere = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots.', price: '30', picture: '', user: pierre)
-piere.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "pierre.png", content_type: "image/png")
+piere = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots.', price: '65', picture: '', user: pierre)
+piere.photo.attach(io: URI.open("https://source.unsplash.com/random?man"), filename: "pierre.png", content_type: "image/png")
 piere.save!
 
-sara = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: sarah)
-sara.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "sarah.png", content_type: "image/png")
+sara = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '75', picture: '', user: sarah)
+sara.photo.attach(io: URI.open("https://source.unsplash.com/random?woman"), filename: "sarah.png", content_type: "image/png")
 sara.save!
 
 nico = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '60', picture: '', user: nicolas)
-nico.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "nicolas.png", content_type: "image/png")
+nico.photo.attach(io: URI.open("https://source.unsplash.com/random?man"), filename: "nicolas.png", content_type: "image/png")
 nico.save!
 
-loui = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots', user: louis)
-loui.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "louis.png", content_type: "image/png")
+loui = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots', price: '20', picture: '', user: louis)
+loui.photo.attach(io: URI.open("https://source.unsplash.com/random?man"), filename: "louis.png", content_type: "image/png")
 loui.save!
 
-julie = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: juliette)
-julie.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "julie.png", content_type: "image/png")
+julie = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '50', picture: '', user: juliette)
+julie.photo.attach(io: URI.open("https://source.unsplash.com/random?woman"), filename: "julie.png", content_type: "image/png")
 julie.save!
 
 puts "teacher seed finish !"
