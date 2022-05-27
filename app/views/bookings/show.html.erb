@@ -1,16 +1,21 @@
-<div class="booking-show-wrapper">
-  <div class="blog_post">
-    <div class="img_pod">
-      <img src="https://pbs.twimg.com/profile_images/890901007387025408/oztASP4n.jpg" alt="random image">
-    </div>
-    <div class="container_copy">
-      <h1>Booking details</h1>
-      <h3><%=@booking.date%></h3>
-      <p><%=@booking.teacher.user.first_name%></p>
-      <p><%=@booking.teacher.user.last_name%></p>
-      <p><%=@booking.teacher.user.city%></p>
+<% require "date"%>
 
+<br>
+<br>
+<br>
+<br>
+<div class="card-container">
+  <div class="card-my-booking u-clearfix">
+    <div class="card-body">
+      <span class="card-number card-circle subtle">B</span>
+      <span class="card-author subtle"><%=@booking.teacher.user.first_name%> <%=@booking.teacher.user.last_name%></span>
+      <h2 class="card-title"><%=@booking.date.strftime(' %m %b %Y')%></h2>
+      <span class="card-description subtle">Club Oenologique, a celebration of the authentic, the artisan and the analogue, is a sumptuous quarterly magazine about wine, spirits and good living: the profound depth of a fine wine.</span>
+      <div class="card-read"><%= link_to dashboard_path do %>Book<% end %></div>
+      <span class="card-tag card-circle subtle">B</span>
     </div>
-    <a class="btn_primary" href='#'>Book now</a>
+    <img src="https://images.unsplash.com/photo-1566995541428-f2246c17cda1?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064" alt="" class="card-media" />
   </div>
+  <div class="card-shadow"></div>
 </div>
+<%= render 'shared/footer' %>

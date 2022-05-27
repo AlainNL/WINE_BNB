@@ -1,43 +1,87 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ email: "Star Wars" }, { email: "Lord of the Rings" }])
-#   Character.create(email: "Luke", movie: movies.first)
 require 'open-uri'
 require 'json'
 
-puts "Start seed"
+puts "------------------------------"
+puts "----------Start seed----------"
+puts "------------------------------"
+sleep(1)
+
+puts "Bookink.destroy_all start..."
+
+Booking.destroy_all
+
+puts "Bookink.destroy_all finish !"
+
+
+puts "Teacher.destroy_all start..."
 
 Teacher.destroy_all
+
+puts "Teacher.destroy_all finish !"
+
+
+puts "User.destroy_all start..."
+
 User.destroy_all
 
+puts "User.destroy_all finish !"
 
-pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean")
+sleep(1)
 
-sarah = User.create(email: 'sarah@gmail.com', password: '12345678', first_name: "sarah", last_name: "du desert")
+puts "User seed start..."
 
-nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit")
+pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean", city: "Rennes")
 
-louis = User.create(email: 'louis@gmail.com', password: '12345678')
+sarah = User.create(email: 'sarah@gmail.com', password: '12345678', first_name: "sarah", last_name: "du desert", city: "Paris")
 
-juliette = User.create(email: 'juliette@gmail.com', password: '12345678')
+nicolas = User.create(email: 'nicolas@gmail.com', password: '12345678', first_name: "nicolas", last_name: "petit", city: "Bordeaux")
 
-puts "user seed"
+louis = User.create(email: 'louis@gmail.com', password: '12345678', first_name: "louis", last_name: "lafonte", city: "Paris")
 
-piere = Teacher.create(feature: '', price: '30', picture: '', user: pierre)
+juliette = User.create(email: 'juliette@gmail.com', password: '12345678', first_name: "juliette", last_name: "Jetaime", city: "Lille")
 
-sara = Teacher.create(feature: '', price: '40', picture: '', user: sarah)
+puts "user seed finish !"
 
-nico = Teacher.create(feature: '', price: '60', picture: '', user: nicolas)
+sleep(1)
 
-Teacher.create(feature: '', price: '70', picture: '', user: louis)
+puts "Teacher seed start..."
 
-Teacher.create(feature: '', price: '100', picture: '', user: juliette)
+piere = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots.', price: '30', picture: '', user: pierre)
+piere.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "pierre.png", content_type: "image/png")
+piere.save!
+
+sara = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: sarah)
+sara.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "sarah.png", content_type: "image/png")
+sara.save!
+
+nico = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '60', picture: '', user: nicolas)
+nico.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "nicolas.png", content_type: "image/png")
+nico.save!
+
+loui = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots', user: louis)
+loui.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "louis.png", content_type: "image/png")
+loui.save!
+
+julie = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: juliette)
+julie.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "julie.png", content_type: "image/png")
+julie.save!
+
+puts "teacher seed finish !"
+
+sleep(1)
+
+puts "Booking seed start..."
 
 Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
 Booking.create(date: '25 mai', user_id: sarah.id, teacher_id: sara.id )
 Booking.create(date: '25 mai', user_id: nicolas.id, teacher_id: nico.id )
 
-puts "teacher seed"
+puts "Booking seed finish..."
+
+sleep(1)
+
+puts "------------------------------"
+puts "----------All Good !----------"
+puts "------------------------------"
+
+sleep(1)

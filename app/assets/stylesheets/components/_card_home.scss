@@ -1,6 +1,9 @@
-.container {
+.container-home {
   margin-top: 10vh;
   margin-bottom: 10vh;
+  z-index: 998;
+  position: absolute;
+  width: 100%;
 }
 :root {
   --surface-color: #fff;
@@ -15,16 +18,16 @@ body {
   font-family: 'Noto Sans JP', sans-serif;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.cards-home {
+  display: flex;
   gap: 2rem;
-  margin: 4rem 5vw;
   padding: 0;
   list-style-type: none;
+  margin-top: 364px;
+  justify-content: center;
 }
 
-.card {
+.card-home {
   background-color: #02020200;
   position: relative;
   display: block;
@@ -34,9 +37,17 @@ body {
   text-decoration: none;
 }
 
+.card-home li {
+  width: 315px;
+}
+
+.cards-home li {
+  width: 290px;
+}
+
 .card__image {
   width: 100%;
-  height: auto;
+  height: 290px;
 }
 
 .card__overlay {
@@ -44,14 +55,14 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  // z-index: 1;
   border-radius: calc(var(--curve) * 1px);
-  background-color: var(--surface-color);
+  background-color: var(--surface-color) !important;
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
 
-.card:hover .card__overlay {
+.card-home:hover .card__overlay {
   transform: translateY(0);
 }
 
@@ -62,7 +73,7 @@ body {
   gap: 2em;
   padding: 2em;
   border-radius: calc(var(--curve) * 1px) 0 0 0;
-  background-color: var(--surface-color);
+  background-color: var(--surface-color) !important;
   transform: translateY(-100%);
   transition: .2s ease-in-out;
 }
@@ -73,7 +84,7 @@ body {
   position: absolute;
   bottom: 100%;
   right: 0;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .card__arc path {
@@ -81,7 +92,7 @@ body {
   d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
 }
 
-.card:hover .card__header {
+.card-home:hover .card__header {
   transform: translateY(0);
 }
 
@@ -95,7 +106,7 @@ body {
 .card__title {
   font-size: 2em;
   margin: 0 0 .3em;
-  color: #6A515E;
+  color: black;
 }
 
 .card__tagline {
@@ -103,19 +114,19 @@ body {
   margin: 1em 0;
   font-family: "MockFlowFont";
   font-size: .8em;
-  color: #D7BDCA;
+  color: black;
 }
 
-.card__status {
+.card__status {    width: 315px;
   font-size: 1em;
-  color: #92868c;
+  color: black;
 }
 
 .card__description {
-  font-size: 2em;
+  font-size: 16px;
   padding: 0 2em 2em;
   margin: 0;
-  color: #D7BDCA;
+  color: black;
   font-family: "MockFlowFont";
   display: -webkit-box;
   -webkit-box-orient: vertical;

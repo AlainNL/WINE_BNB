@@ -2,12 +2,13 @@
 <html>
   <head>
     <title>WINEBnb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
   <body>
@@ -16,10 +17,10 @@
     <p class="alert"><%= alert %></p>
 
     <%= render 'shared/navbar' %>
+
     <div class="main-container">
         <%= yield %>
     </div>
-    <%= render 'shared/footer' %>
 
   </body>
 </html>

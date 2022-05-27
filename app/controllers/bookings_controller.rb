@@ -13,18 +13,21 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.date = @date
+    @booking.teacher = Teacher.find(params[:teacher_id])
     @booking.user = current_user
-    @booking.teacher = @teacher
     flash[:notice] = @booking.errors.full_messages.to_sentence unless @booking.save
     authorize @booking
-    redirect_to teacher_path
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :user_id, :teacher_id)
+    params.require(:booking).permit(:date)
   end
 
   def set_teacher

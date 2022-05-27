@@ -1,1 +1,33 @@
-test
+<div class="newformT" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg')">
+
+  <div class="card-container" >
+    <div class="card-my-booking u-clearfix">
+      <div class="card-body">
+        <span class="card-number card-circle subtle">W</span>
+        <h2 class="card-title">Book now!</h2>
+        <span class="card-description subtle">
+          Create your oenologist profile in 2 minutes
+        </span>
+        <div class="card-read">
+          <h2><%= @teacher.user.first_name.capitalize + @teacher.user.last_name.capitalize %></h2>
+          <h3><%= @teacher.user.city %></h3>
+          <p><%= @teacher.feature%></p>
+          <p>Half day session rate: <%= @teacher.price.to_i%>$</p>
+          <%= simple_form_for([@teacher, @booking]) do |f| %>
+          <%= f.input :date, as: :date, label: "Date where you want to book #{@teacher.user.first_name}", html5: true %>
+          <%= f.submit "Book", class: 'btn btn-flat' %>
+          <% end %>
+          <%= link_to "Back to oenologists", teachers_path %>
+        </div>
+        <span class="card-tag card-circle subtle">W</span>
+      </div>
+      <% if @teacher.photo.attached? %>
+          <%= cl_image_tag @teacher.photo.key, class: "card-media" %>
+        <% else %>
+          <img src="https://images.unsplash.com/photo-1566995541428-f2246c17cda1?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064" alt="" class="card-media" />
+      <% end %>
+    </div>
+    <div class="card-shadow"></div>
+  </div>
+</div>
+<%= render 'shared/footer' %>
