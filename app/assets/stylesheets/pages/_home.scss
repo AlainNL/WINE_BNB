@@ -9,31 +9,27 @@
   top: 0;
   bottom: 0;
   z-index: -1;
-  }
+}
 
-  h1, h2, #btnVideo{
+h1, h2 {
 
-  color: white;
+color: white;
 
-  font-family: Trebuchet MS;
+font-family: Trebuchet MS;
 
-  font-weight: bold;
+font-weight: bold;
 
-  text-align: center;
+text-align: center;
 
-  }
+}
 
-  h1 {
-  font-size: 6rem;
-  // margin-top: 30vh;
-  }
+h1 {
+font-size: 6rem;
+// margin-top: 30vh;
+}
 
-  h2 { font-size: 3rem; }
+h2 { font-size: 3rem; }
 
-  #btnVideo{
-  font-size: 1.5rem;
-  background: 0;
-  border: 0;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  }
+body {
+  background-color: none !important;
+}
