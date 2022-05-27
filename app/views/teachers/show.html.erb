@@ -1,17 +1,19 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="card_teacher">
-  <div class="container_teacher">
-    <%= cl_image_tag @teacher.photo.key, height: 300, width: 300, crop: :fill %>
-    <h5><%=@teacher.user.first_name%> <%=@teacher.user.last_name%></h5>
-    <p class="title"><%=@teacher.user.city%></p>
+    <div class="teacher-picture" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%=cl_image_path @teacher.photo.key%>)"></div>
+    <h2><%=@teacher.user.first_name%> <%=@teacher.user.last_name%></h2>
+    <p><%=@teacher.user.city%></p>
     <p><%=@teacher.feature%></p>
-    <p><%=@teacher.price%></p>
-    <a id ="teacher" href="#"><i class="fa fa-dribbble"></i></a>
-    <a id ="teacher" href="#"><i class="fa fa-twitter"></i></a>
-    <a id ="teacher" href="#"><i class="fa fa-linkedin"></i></a>
-    <a id ="teacher" href="#"><i class="fa fa-facebook"></i></a>
-    <p><button-contact><%= link_to "Book Now!", new_teacher_booking_path(@teacher.id) %></button-contact></p>
+    <div class="card-price"><%=@teacher.price.to_i%> €</div>
 
-  </div>
+      <div class="social-logo">
+        <a id ="teacher" href="#"><i class="fa fa-dribbble"></i></a>
+        <a id ="teacher" href="#"><i class="fa fa-twitter"></i></a>
+        <a id ="teacher" href="#"><i class="fa fa-linkedin"></i></a>
+        <a id ="teacher" href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+
+      <%= link_to "Book Now!", new_teacher_booking_path(@teacher.id), class: "button-main"%>
+
 </div>
