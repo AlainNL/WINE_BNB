@@ -5,11 +5,30 @@ puts "------------------------------"
 puts "----------Start seed----------"
 puts "------------------------------"
 sleep(1)
-puts "User seed start..."
+
+puts "Bookink.destroy_all start..."
 
 Booking.destroy_all
+
+puts "Bookink.destroy_all finish !"
+
+
+puts "Teacher.destroy_all start..."
+
 Teacher.destroy_all
+
+puts "Teacher.destroy_all finish !"
+
+
+puts "User.destroy_all start..."
+
 User.destroy_all
+
+puts "User.destroy_all finish !"
+
+sleep(1)
+
+puts "User seed start..."
 
 pierre = User.create(email: 'pierre@gmail.com', password: '12345678', first_name: "pierre", last_name: "jean", city: "Rennes")
 
@@ -23,6 +42,7 @@ juliette = User.create(email: 'juliette@gmail.com', password: '12345678', first_
 
 puts "user seed finish !"
 
+sleep(1)
 
 puts "Teacher seed start..."
 
@@ -48,6 +68,8 @@ julie.save!
 
 puts "teacher seed finish !"
 
+sleep(1)
+
 puts "Booking seed start..."
 
 Booking.create(date: '25 mai', user_id: pierre.id, teacher_id: piere.id )
@@ -61,3 +83,5 @@ sleep(1)
 puts "------------------------------"
 puts "----------All Good !----------"
 puts "------------------------------"
+
+sleep(1)
