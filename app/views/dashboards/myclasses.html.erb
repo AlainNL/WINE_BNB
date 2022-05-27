@@ -1,15 +1,12 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1652466439798-fe090b23f18e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832)">
-  MY DASHBOARD
-</div>
+<% require "date"%>
 
-
-<br>
 <div class="card-profile">
     <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070" />
     <div class="card-profile-infos">
       <div>
       <br>
         <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+        <h2><%= current_user.city %></h2>
       <br>
         <p>Une séance d'œnologie est à la fois une exploration des sens et du savoir.<br>
         En effet, c'est d'abord une méthode de dégustation en 3 étapes qui font appel à vos sens :<br>
@@ -36,7 +33,8 @@
 </ul>
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1541971897566-308cf7ad0934?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070)">
-      Fri May 27th, 2022
+       <%# raise %>
+      <%#=@booking.date.strftime(' %m %b %Y')%>
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1598306442890-742e834da092?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674)">
