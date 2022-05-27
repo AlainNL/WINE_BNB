@@ -13,7 +13,7 @@
           <p>Half day session rate: <%= @teacher.price.to_i%>$</p>
           <%= simple_form_for([@teacher, @booking]) do |f| %>
           <span class="card-author subtle"><%= f.input :date, as: :date, label: "Date #{@teacher.user.first_name}", html5: true %></span>
-          <%= f.submit "Book", class: 'btn btn-flat' %>
+          <%= f.submit "Book", class: 'btn button-main' %>
           <% end %>
           <%= link_to "Back to œnologists", teachers_path %>
         </div>

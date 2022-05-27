@@ -21,6 +21,10 @@
   font-family: Lora, sans-serif;
 }
 
+.nav-custom .gallery .title p {
+  font-size: 40px;
+}
+
 p {
   margin: 0;
 }
@@ -176,8 +180,8 @@ p {
     &-link {
       position: relative;
       display: inline-flex;
-      font-size: 2rem;
-      color: white;
+      font-size: 14px;
+      color: rgb(75, 73, 73);
       text-decoration: none;
 
       span {
@@ -252,18 +256,19 @@ p {
         &::before {
           position: absolute;
           content: attr(data-label);
-          top: 0;
+          top: 100px;
           left: 0;
-          // z-index: 1;
+          font-size: 16px;
           display: flex;
           justify-content: center;
           align-items: center;
           width: 100%;
-          height: 100%;
+          height: 60px;
           color: white;
           background: rgba(0, 0, 0, 0.6);
-          opacity: 0;
+          /* opacity: 0; */
           transition: 0.4s;
+          z-index: 200;
         }
       }
 

@@ -50,7 +50,7 @@ piere = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bu
 piere.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "pierre.png", content_type: "image/png")
 piere.save!
 
-sara = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: sarah)
+sara = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '140', picture: '', user: sarah)
 sara.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "sarah.png", content_type: "image/png")
 sara.save!
 
@@ -58,11 +58,11 @@ nico = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. 
 nico.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "nicolas.png", content_type: "image/png")
 nico.save!
 
-loui = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots', user: louis)
+loui = Teacher.new(feature: 'Red wine specialist with demonstrated skills on Bugundy wines. Also expert in cider due to my roots', price: '100', picture: '', user: louis)
 loui.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "louis.png", content_type: "image/png")
 loui.save!
 
-julie = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', user: juliette)
+julie = Teacher.new(feature: 'White wine from France. Fond of vins du Languedoc. Can also provide advise on rhums', price: '75', picture: '', user: juliette)
 julie.photo.attach(io: URI.open("https://source.unsplash.com/random"), filename: "julie.png", content_type: "image/png")
 julie.save!
 

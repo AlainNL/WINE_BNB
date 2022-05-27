@@ -5,13 +5,13 @@
         <span class="card-number card-circle subtle">W</span>
 
         <h2 class="card-title">Welcome to WineBnB</h2>
-        <span class="card-description subtle">Create your oenologist profile in 2 minutes</span>
+        <span class="card-description subtle">Create your oenologist profile in 2 minutes and share your passion</span>
         <div class="card-read">
           <%= simple_form_for @teacher do |f| %>
             <%= f.input :photo, label: 'Add your picture', as: :file %>
             <%= f.input :feature, label: 'Main skills', placeholder: 'Wines of Bordeaux' %>
             <%= f.input :price, label: "Rate per half day" %>
-            <%= f.submit "Register", class: 'btn btn-flat'%>
+            <%= f.submit "Register", class: 'btn button-main'%>
           <% end %>
           <%= link_to "Back to oenologists", teachers_path %>
         </div>
