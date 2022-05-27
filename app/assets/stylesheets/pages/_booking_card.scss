@@ -94,7 +94,7 @@
   &:hover {color: #990D35}
 }
 .card-read {
-  cursor: pointer;
+  // cursor: pointer;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: 6px;
@@ -104,15 +104,15 @@
   text-transform: uppercase;
 }
 
-.card-read:after {
-  background-color: #b8bddd;
-  content: "";
-  display: block;
-  height: 1px;
-  position: absolute;
-  top: 9px;
-  width: 75%;
-}
+// .card-read:after {
+//   background-color: #b8bddd;
+//   content: "";
+//   display: block;
+//   height: 1px;
+//   position: absolute;
+//   top: 9px;
+//   width: 75%;
+// }
 
 .card-tag {
   float: right;
