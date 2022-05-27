@@ -1,6 +1,8 @@
 .container-home {
   margin-top: 10vh;
   margin-bottom: 10vh;
+  z-index: 998;
+  position: absolute;
 }
 :root {
   --surface-color: #fff;
@@ -44,9 +46,9 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  // z-index: 1;
   border-radius: calc(var(--curve) * 1px);
-  background-color: var(--surface-color);
+  background-color: var(--surface-color) !important;
   transform: translateY(100%);
   transition: .2s ease-in-out;
 }
@@ -62,7 +64,7 @@ body {
   gap: 2em;
   padding: 2em;
   border-radius: calc(var(--curve) * 1px) 0 0 0;
-  background-color: var(--surface-color);
+  background-color: var(--surface-color) !important;
   transform: translateY(-100%);
   transition: .2s ease-in-out;
 }
@@ -73,7 +75,7 @@ body {
   position: absolute;
   bottom: 100%;
   right: 0;
-  z-index: 1;
+  // z-index: 1;
 }
 
 .card__arc path {
