@@ -1,16 +1,3 @@
-// .navbar-lewagon {
-//   justify-content: space-between;
-//   background: white;
-// }
-
-// .navbar-lewagon .navbar-collapse {
-//   flex-grow: 0;
-// }
-
-// .navbar-lewagon .navbar-brand img {
-//   width: 40px;
-// }
-
 @import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
 
 @mixin sp-layout {
@@ -267,7 +254,7 @@ p {
           content: attr(data-label);
           top: 0;
           left: 0;
-          z-index: 1;
+          // z-index: 1;
           display: flex;
           justify-content: center;
           align-items: center;
