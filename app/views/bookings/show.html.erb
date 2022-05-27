@@ -9,7 +9,7 @@
     <div class="card-body">
       <span class="card-number card-circle subtle">B</span>
       <span class="card-author subtle"><%=@booking.teacher.user.first_name%> <%=@booking.teacher.user.last_name%></span>
-      <h2 class="card-title"><%=@booking.date.strftime(' %m %b %Y')%></h2>
+      <h2 class="card-title"><%#=@booking.date.strftime(' %m %b %Y')%></h2>
       <span class="card-description subtle">Club Oenologique, a celebration of the authentic, the artisan and the analogue, is a sumptuous quarterly magazine about wine, spirits and good living: the profound depth of a fine wine.</span>
       <div class="card-read"><%= link_to dashboard_path do %>Book<% end %></div>
       <span class="card-tag card-circle subtle">B</span>

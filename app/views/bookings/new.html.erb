@@ -5,7 +5,7 @@
       <div class="booking-infos">
         <%= cl_image_tag @teacher.photo.key, class: "avatar-large" %>
         <div class="teacher-infos">
-          <h2><%= @teacher.user.first_name.capitalize %> <%= teacher.user.last_name.capitalize %></h2>
+          <h2><%= @teacher.user.first_name.capitalize + @teacher.user.last_name.capitalize %></h2>
           <h3><%= @teacher.user.city %></h3>
           <p><%= @teacher.feature%></p>
           <p>Half day session rate: <%= @teacher.price.to_i%>$</p>
