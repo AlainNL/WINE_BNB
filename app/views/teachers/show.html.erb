@@ -1,28 +1,30 @@
-<div class="socials">
-  <% if @teacher.photo.attached? %>
-    <%= cl_image_tag @teacher.photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <div class="menu-icon">
-  <div class="menu item1"><i class="fas fa-heart"></i></div>
-  <div class="menu item2"><i class="fas fa-bars"></i></div>
-</div>
+<% require "date"%>
 
-<div class="details">
-  <h1><%@teacher.user.first_name%> <%@teacher.user.last_name%></h1>
-  <h2><%@teacher.user.city%></h2>
-  <p><%@teacher.feature%></p>
-  <p><%@teacher.price%></p>
+<br>
+<br>
+<br>
+<br>
+<div class="formnewT" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://cdn.pixabay.com/photo/2014/11/22/18/38/wine-541922_960_720.jpg')">
+  <div class="card-container">
+    <div class="card-my-booking u-clearfix">
+      <div class="card-body">
+        <span class="card-number card-circle subtle">B</span>
+        <span class="card-author subtle"><p><%=@teacher.user.city%></p></span>
+          <h2 class="card-title"><%=@teacher.user.first_name.capitalize%> <%=@teacher.user.last_name.capitalize%></h2>
+        <span class="card-description subtle"><p><%=@teacher.feature%></p></span>
+        <div class="card-price my-2"><%=@teacher.price.to_i%> €</div>
+        <%= link_to "Book Now!", new_teacher_booking_path(@teacher.id), class: "button-main my-4"%>
 
-</div>
+        <div class="social-logo">
+                <a id ="teacher" href="#"><i class="fa fa-dribbble"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-twitter"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-linkedin"></i></a><br>
+                <a id ="teacher" href="#"><i class="fa fa-facebook"></i></a><br>
+              </div>
+      </div>
+        <%=cl_image_tag @teacher.photo.key, class:"card-media" %>
+    </div>
 
-<div class="foot-car">
-  <h1>Contact</h1>
-  <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-  <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
-
-  <div class="links">
-    <button>Contact me</button>
-    <%= link_to "book now!", new_teacher_booking_path(@teacher.id) %>
   </div>
 </div>
-<%= render 'shared/footer' %>
+  <%= render 'shared/footer' %>

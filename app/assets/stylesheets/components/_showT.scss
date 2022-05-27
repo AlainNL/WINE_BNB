@@ -1,6 +1,5 @@
 .card_teacher {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -10,17 +9,19 @@
   font-size: 18px;
 }
 
-button-contact {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
+
+.card-price{
+  background-color: black;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  font-size: 22px;
+  color: white;
+  background-color: black;
+  width: 66px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-radius: 15px;
 }
 
 #teacher {
@@ -29,6 +30,29 @@ button-contact {
   color: black;
 }
 
-button-contact:hover, a.teacher:hover {
-  opacity: 0.7;
+.name {
+  font-size: 30px;
+}
+
+.feature {
+  margin : auto;
+  font-size: 15px;
+}
+
+.teacher-picture {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+}
+
+.social-logo {
+  width: 19px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 11px;
+  margin: auto;
+  width: 79px;
+  background-color: white;
+  border-radius: 15px;
 }
